@@ -1,0 +1,114 @@
+
+                USSSSSSSSSSSSSSSSW
+            USSSSSSSQLHFDDFJNQSSSSSSSW
+         USSSSSJAAAAAAAAAAAAAAAAAANSSSSSW
+       SSSSSBAAAAADS          OBAAAAAHSSSSU
+     USSSSAAAAB      WNHFHHQY     WAAAAASSSSY
+    SSSSAAAAW   WAAAAAAAAAAAAAAAAY   JAAABSSSS
+  YSSSJAAAS   AAAAAAW        SAAAAAB   BAAAQSSS
+ YSSSAAAA   AAAAD                AAAAJ   AAANSSS
+ SSSDAAD  YAAAJ                    AAAA   AAAOSSS
+SSSNAAB  UAAAY                      SAAA   AAASSSW
+SSSAAA   AAA                         QAAA  QAADSSS
+SSNAAB  FAAO                          FAAQ  AAASSS
+SSFAAU  AAA                           WAAD  DAAOSS
+SSBAAY  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA  HAAJSS
+SSFAAW  AAAUUUUUUUUUUUUUUUUUUUUUUUUUUUSAAB  DAAOSS
+SSJAAD  BAAU                          FAAJ  AAASSS
+SSSAAA  YAAA                         WAAA  WAABSSS
+SSSFAAD  HAAA                       YAAAY  AAAQSSU
+ SSSBAAL  NAAAW                    NAAAY  AAAFSSS
+ YSSSAAAJ  YAAAAY                QAAAA   AAADSSS
+  WSSSAAAA   UAAAAAU          OAAAAA   WAAAJSSS
+   YSSSOAAAA    DAAAAAAAAAAAAAAAAN   YAAAASSSS
+     SSSSHAAAAQ    YQDAAAAAAFS     DAAAAOSSSU
+       SSSSOAAAAADW            QBAAAAAQSSSS
+        YSSSSSNAAAAAAAAAAAAAAAAAAABQSSSSS
+           WSSSSSSQLFAAAAAAABHNSSSSSSSY
+               USSSSSSSSSSSSSSSSSSW
+
+▀█▀ █▀█ █▀█ █▀█ █░█ █▀▀ █▀█  █░█ █▀ █▀▀ █▀█  █▀▀ █░█ █ █▀▄ █▀▀
+░█░ █▀▀ █▄█ ▀▀█ █▄█ ██▄ █▀▄  █▄█ ▄█ ██▄ █▀▄  █▄█ █▄█ █ █▄▀ ██▄
+T    P   O   Q   U   E   R    U   S  E   R    G   U  I  D   E
+------------------------------------------------------------------------------
+
+The rundown:
+
+TPoquer is what we call a network "poking" tool, named as such because it "pokes" the URL / IP that you present it with for information.
+
+This info includes but is not limited to:
+- Country
+- Registration Date
+- City
+- Organization Identification Tag
+- NetType
+- NetName
+- CIDR
+- HTTP Headers
+- Open Ports
+
+Note: TPoquer is NOT a "hacking" tool in any way shape or form, all of the information it provides are availible to the public in one way or another.
+
+
+
+
+
+-----------------INSTALLATION-------------------------
+
+If you are on Debian, or another Debian based distro such as Ubuntu, Zorin and Pop_OS! you should go to the github repository and navigate to the "releases" section, in there you will find a file called "TPoquer_X.X.X.deb", download that file and install it with the following:
+
+cd /<insert_you_package_location>
+sudo dpkg -i TPoquer_X.X.X.deb
+
+
+If you are on on RedHat Enterprise, or another RedHat based distro such as Fedora, CentOS and Rocky Linux, you should go to the github repository and navigate to the "releases" section, in there you will find a file called "TPoquer_X.X.X.rpm", download that file and install it with the following:
+
+cd /<insert_you_package_location>
+sudo rpm -ivh TPoquer_X.X.X.rpm
+
+------------BUILDING FROM SOURCE---------------------
+
+As you may have noticed, TPoquer is not natively availible for the Arch Linux family of distros as such it is recommended that you either simply run the Poquer.lua file using the command:
+
+cd /<insert_your_lua_file_directory>
+lua Poquer.lua -flags
+
+However, if you want to be able to run the tool from anywhere in your terminal you will need to have one of several available lua compilation tools such as:
+
+- luatastic
+- luapak (requires luarocks)
+- srlua
+
+which can then be used to manually integrate the binary into your system
+
+Alternatively, you may use a package converter tool (such as DebTap) to convert either the Debian package or the RedHat package into a usable Arch package.
+
+
+----------------ACTUALLY USING TPOQUER--------------------------
+
+To use TPoquer you can run the command "poque <url/ip> -parameter".
+For example:
+
+poque domain.com -clip
+
+poque 192.0.2.1 -wtf /directory/file.txt
+
+after this you will wait a second, then the output will be displayed on your terminal
+
+
+But wait a minute, what do those flags do?
+
+-------------FLAGS / PARAMETER EXPLANATIONS---------------
+
+the -wtf flag stand for "write to file" ;) and must be succeeded by a directory that leads to a file example: poque domain.com -wtf /path/to/file.txt <-- this will write the poked info to the file
+
+the -clip flag is fairly self explanitory and simple, it cant be succeeded by anything and copies all the poked information to the users clipboard.
+
+------------------------------------------------------------
+
+alright, that everything, happy poqueing!
+
+
+
+
+
