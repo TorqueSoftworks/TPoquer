@@ -11,7 +11,7 @@ local ltn12 = require("ltn12")
 -- define target (this can either be an ip or ul, it doesnt matter)
 local target = arg[1]
 if not target then
-    print("Usage: lua Poquer.lua <ip-or-url>")
+    print("Usage: poque <ip/url>")
     os.exit(1)
 end
 
@@ -87,9 +87,9 @@ function copy_to_clipboard(text)
     if f then
         f:write(text)
         f:close()
-        print("\n[Copied to clipboard]")
+        print("\n[POKED INFO COPIED TO CLIPBOARD]")
     else
-        print("\n[Failed to copy to clipboard — is xclip installed?]")
+        print("\n[ERR, FAILED TO COPY TO CLIPBOARD. MAKE SURE YOU HAVE XCLIP INSTALLED ON YOUR SYSTEM]")
     end
 end
 
@@ -99,9 +99,9 @@ function save_to_file(path, text)
     if f then
         f:write(text)
         f:close()
-        print("\n[Saved to file: " .. path .. "]")
+        print("\n[SAVED TO: " .. path .. "]")
     else
-        print("\n[Failed to save to file]")
+        print("\n[ERR, FAILED TO SAVE POKED INFO TO FILE]")
     end
 end
 
@@ -147,7 +147,7 @@ end
 -- Parse arguments
 local target = arg[1]
 if not target then
-    print("Usage: lua Poquer.lua <ip-or-url> [-ctc] [-ctf <path>]")
+    print("Usage: poque <ip-or-url> [-clip] [-wtf <path>]")
     os.exit(1)
 end
 
